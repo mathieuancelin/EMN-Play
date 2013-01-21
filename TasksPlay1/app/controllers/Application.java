@@ -32,7 +32,7 @@ public class Application extends Controller {
     public static void done(Long id, Boolean done) {
     	Task task = Task.findById(id);
     	task.done = done;
-    	task.save();
+    	task = task.save();
     	renderJSON(task);
     }
 }

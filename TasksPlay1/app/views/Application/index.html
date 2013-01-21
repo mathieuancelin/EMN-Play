@@ -38,10 +38,10 @@
     }
 	$( '#add' ).click( function( e ) {
 		e.preventDefault()
-		var name = $('#name').val();
+		var nameValue = $('#name').val();
 		$('#name').val('');
-		if ( name !== null && name !== '' ) {
-			$.post( '@{Application.add()}', { name: name }, function( task ) {
+		if ( nameValue !== null && nameValue !== '' ) {
+			$.post( '@{Application.add()}', { name: nameValue }, function( task ) {
 				$( '#tasks' ).append( render( 'taskTemplate', { id: task.id, name: task.name, done: task.done } ) )
 				$( '#message' ).hide()
 			})

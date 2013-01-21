@@ -32,7 +32,6 @@ public class Application extends Controller {
         render("Application/index.html", cat1, cat2);
     }
 
-
     public static void stats() {
         Comparator<Cat> byPicked = new Comparator<Cat>() {
             public int compare(Cat cat1, Cat cat2) {
